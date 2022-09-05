@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Paragraph from './Paragraphs';
 
 function App() {
+  const colors = ["Red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+  const pars = colors.map(el => <Paragraph
+    value={el}
+  />
+  )
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {pars}
     </div>
   );
 }
